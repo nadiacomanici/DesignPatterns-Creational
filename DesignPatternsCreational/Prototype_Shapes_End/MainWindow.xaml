@@ -1,0 +1,122 @@
+﻿<Window x:Class="Prototype_Shapes_End.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prototype_Shapes_End"
+        xmlns:toolkit="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:classes="clr-namespace:Prototype_Shapes_End.Classes"
+        mc:Ignorable="d"
+        Title="Add Shapes" Height="450" Width="800">
+    <Window.Resources>
+        <toolkit:SolidColorBrushToColorConverter x:Key="colorToSolidColorBrushConverter" />
+
+        <Style TargetType="ToggleButton">
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Padding" Value="5"/>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="toolkit:ColorPicker">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+
+        <Style TargetType="toolkit:DoubleUpDown">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Orientation="Horizontal">
+            <ToggleButton Content="Add Rectangle" Name="btnAddRectangle" Click="BtnAddRectangle_Click"/>
+            <ToggleButton Content="Add Ellipse" Name="btnAddEllipse" Click="BtnAddEllipse_Click"/>
+        </StackPanel>
+
+        <ItemsControl Grid.Row="1" Margin="5" Name="listBox">
+            <ItemsControl.Resources>
+                <DataTemplate DataType="{x:Type classes:SimpleEllipse}">
+                    <Ellipse Width="{Binding Width}" Height="{Binding Height}"
+                             Fill="{Binding FillBrush}" Stroke="{Binding StrokeBrush}" StrokeThickness="1"
+                             MouseLeftButtonDown="Shape_MouseLeftButtonDown"
+                             MouseMove="Shape_MouseMove"
+                             MouseLeftButtonUp="Shape_MouseLeftButtonUp">
+                        <Ellipse.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Clone" Name="menuItemClone" Click="MenuItemClone_Click"/>
+                            </ContextMenu>
+                        </Ellipse.ContextMenu>
+                    </Ellipse>
+                </DataTemplate>
+                <DataTemplate DataType="{x:Type classes:SimpleRectangle}">
+                    <Rectangle Width="{Binding Width}" Height="{Binding Height}"
+                             Fill="{Binding FillBrush}" Stroke="{Binding StrokeBrush}" StrokeThickness="1"
+                             MouseLeftButtonDown="Shape_MouseLeftButtonDown"
+                             MouseMove="Shape_MouseMove"
+                             MouseLeftButtonUp="Shape_MouseLeftButtonUp">
+                        <Rectangle.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Clone" Name="menuItemClone" Click="MenuItemClone_Click"/>
+                            </ContextMenu>
+                        </Rectangle.ContextMenu>
+                    </Rectangle>
+                </DataTemplate>
+            </ItemsControl.Resources>
+
+            <ItemsControl.ItemContainerStyle>
+                <Style TargetType="ContentPresenter">
+                    <Setter Property="Canvas.Left" Value="{Binding Path=Left}" />
+                    <Setter Property="Canvas.Top" Value="{Binding Path=Top}" />
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas Background="LightGray"
+                        MouseLeftButtonDown="Canvas_MouseLeftButtonDown"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+        <Grid Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" Name="gridProperties">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="Width:"/>
+            <toolkit:DoubleUpDown Grid.Row="0" Grid.Column="1" Value="{Binding Path=Width}"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="Height:"/>
+            <toolkit:DoubleUpDown Grid.Row="1" Grid.Column="1" Value="{Binding Path=Height}"/>
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="Fill:"/>
+            <toolkit:ColorPicker Grid.Row="2" Grid.Column="1" Name="colorPickerFill" SelectedColor="{Binding Path=FillBrush, Converter={StaticResource colorToSolidColorBrushConverter}}"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="Stroke:"/>
+            <toolkit:ColorPicker Grid.Row="3" Grid.Column="1" Name="colorPickerStroke" SelectedColor="{Binding Path=StrokeBrush, Converter={StaticResource colorToSolidColorBrushConverter}}"/>
+
+            <TextBlock Grid.Row="4" Grid.Column="0" Text="Left:"/>
+            <toolkit:DoubleUpDown Grid.Row="4" Grid.Column="1" Value="{Binding Path=Left}"/>
+
+            <TextBlock Grid.Row="5" Grid.Column="0" Text="Top:"/>
+            <toolkit:DoubleUpDown Grid.Row="5" Grid.Column="1" Value="{Binding Path=Top}"/>
+        </Grid>
+    </Grid>
+</Window>
