@@ -1,16 +1,17 @@
 ﻿using System;
-using Singleton_Logger_End.Classes;
+using Singleton_Logger_Demo.Classes;
 
-namespace Singleton_Logger_End
+namespace Singleton_Logger_Demo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Logger logger = new Logger();
             try
             {
-                University university = new University(new Logger());
+                var something = Logger.SomethingSomething;
+
+                University university = new University(Logger.GetInstance());
                 university.AddStudent("Nadia", "Comanici");
                 university.AddStudent("Ion", "Popescu");
                 university.DeleteStudentById(1);
@@ -18,7 +19,7 @@ namespace Singleton_Logger_End
             }
             catch (Exception ex)
             {
-                logger.AddMessage(ex.Message);
+                Logger.GetInstance().AddMessage(ex.Message);
             }
         }
     }

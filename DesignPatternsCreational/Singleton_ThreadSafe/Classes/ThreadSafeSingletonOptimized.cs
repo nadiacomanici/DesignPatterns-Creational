@@ -4,7 +4,6 @@ namespace Singleton_ThreadSafe.Classes
 {
     public sealed class ThreadSafeSingletonOptimized
     {
-        private static ThreadSafeSingletonOptimized _instance;
         private static int _numberOfInstances = 1;
         private readonly int _loggerIndex;
 

@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Prototype_ShallowAndDeepClone.Classes
 {
     [Serializable]
+    [DebuggerDisplay("{FirstName} {LastName}")]
     public class Author : ICloneable
     {
         public string FirstName { get; set; }

@@ -43,7 +43,6 @@ namespace Singleton_ThreadSafe
             t2.Start(2);
         }
 
-
         private static void DoWork_ThreadSafeSingletonOptimized(object parameter)
         {
             for (int i = 0; i < 10; i++)
