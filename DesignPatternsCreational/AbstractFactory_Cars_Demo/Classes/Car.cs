@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Timers;
+using AbstractFactory_Cars_Demo.Classes.Contracts;
 
-namespace AbstractFactory_Cars_Begin.Classes
+namespace AbstractFactory_Cars_Demo.Classes
 {
     public class Car
     {

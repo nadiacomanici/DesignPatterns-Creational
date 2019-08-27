@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{BABDA702-840E-42C4-9C46-FD57A008164E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AbstractFactory_Cars_Begin</RootNamespace>
-    <AssemblyName>AbstractFactory_Cars_Begin</AssemblyName>
+    <RootNamespace>AbstractFactory_Cars_Demo</RootNamespace>
+    <AssemblyName>AbstractFactory_Cars_Demo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -1,4 +1,6 @@
-﻿namespace AbstractFactory_Cars_Begin.Classes.Electric
+﻿using AbstractFactory_Cars_Demo.Classes.Contracts;
+
+namespace AbstractFactory_Cars_Demo.Classes.Electric
 {
     public class ElectricCarFactory : ICarFactory
     {

@@ -1,15 +1,18 @@
 ﻿using System.Threading;
-using AbstractFactory_Cars_Begin.Classes;
-using AbstractFactory_Cars_Begin.Classes.Electric;
+using AbstractFactory_Cars_Demo.Classes;
+using AbstractFactory_Cars_Demo.Classes.Combustion;
+using AbstractFactory_Cars_Demo.Classes.Contracts;
+using AbstractFactory_Cars_Demo.Classes.Electric;
 
-namespace AbstractFactory_Cars_Begin
+namespace AbstractFactory_Cars_Demo
 {
 
     class Program
     {
         static void Main(string[] args)
         {
-            var car = new Car(new ElectricCarFactory(10, 8, "liters"));
+            //var car = new Car(new ElectricCarFactory(8, 4, "kW"));
+            var car = new Car(new CombustionCarFactory(10, 8, "liters"));
             car.TurnOn();
             while (car.Engine.State != EngineState.Stopped)
             {

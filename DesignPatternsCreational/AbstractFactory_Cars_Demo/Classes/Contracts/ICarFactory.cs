@@ -1,4 +1,4 @@
-﻿namespace AbstractFactory_Cars_Begin.Classes
+﻿namespace AbstractFactory_Cars_Demo.Classes.Contracts
 {
     public interface ICarFactory
     {

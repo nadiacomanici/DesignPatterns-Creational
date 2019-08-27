@@ -1,6 +1,6 @@
-﻿using System;
+﻿using AbstractFactory_Cars_Demo.Classes.Contracts;
 
-namespace AbstractFactory_Cars_Begin.Classes
+namespace AbstractFactory_Cars_Demo.Classes.Combustion
 {
     public class CombustionCarFactory : ICarFactory
     {
