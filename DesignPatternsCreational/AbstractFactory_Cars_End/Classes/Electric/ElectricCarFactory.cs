@@ -5,14 +5,23 @@ namespace AbstractFactory_Cars_End.Classes.Combustion
 {
     public class ElectricCarFactory : ICarFactory
     {
-        public Engine CreateEngine()
+        private readonly double _capacityInUnits;
+        private readonly double _availableUnits;
+
+        public ElectricCarFactory(double capacityInUnits, double availableUnits)
+        {
+            _capacityInUnits = capacityInUnits;
+            _availableUnits = availableUnits;
+        }
+
+        public IEngine CreateEngine()
         {
             return new ElectricEngine();
         }
 
         public FuelStorage CreateFuelStorage()
         {
-            return new ElectricBattery(30, 30, "kW");
+            return new ElectricBattery(_capacityInUnits, _availableUnits, "kW");
         }
     }
 }

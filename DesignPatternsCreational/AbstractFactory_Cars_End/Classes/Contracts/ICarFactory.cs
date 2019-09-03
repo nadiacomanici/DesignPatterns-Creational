@@ -3,6 +3,6 @@
     public interface ICarFactory
     {
         FuelStorage CreateFuelStorage();
-        Engine CreateEngine();
+        IEngine CreateEngine();
     }
 }

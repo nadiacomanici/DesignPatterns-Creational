@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5D9B0778-29FB-4B71-97BF-1A921546729A}</ProjectGuid>
+    <ProjectGuid>{6B34F698-0BF5-4AAD-BE3F-BC73DBCA5025}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AbstractFactory_Cars_End</RootNamespace>
-    <AssemblyName>AbstractFactory_Cars_End</AssemblyName>
+    <RootNamespace>AbstractFactory_Cars_Demo</RootNamespace>
+    <AssemblyName>AbstractFactory_Cars_Demo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,16 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Car.cs" />
-    <Compile Include="Classes\Combustion\CombustionEngine.cs" />
-    <Compile Include="Classes\Combustion\CombustionFactory.cs" />
-    <Compile Include="Classes\Combustion\GasTank.cs" />
-    <Compile Include="Classes\Contracts\IEngine.cs" />
-    <Compile Include="Classes\Contracts\EngineState.cs" />
-    <Compile Include="Classes\Contracts\FuelStorage.cs" />
-    <Compile Include="Classes\Contracts\ICarFactory.cs" />
-    <Compile Include="Classes\Electric\ElectricCarFactory.cs" />
-    <Compile Include="Classes\Electric\ElectricBattery.cs" />
-    <Compile Include="Classes\Electric\ElectricEngine.cs" />
+    <Compile Include="Classes\Engine.cs" />
+    <Compile Include="Classes\FuelStorage.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

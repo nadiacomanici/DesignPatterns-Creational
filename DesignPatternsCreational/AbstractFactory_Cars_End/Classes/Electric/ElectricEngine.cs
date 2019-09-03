@@ -2,9 +2,11 @@
 
 namespace AbstractFactory_Cars_End.Classes.Electric
 {
-    public class ElectricEngine : Engine
+    public class ElectricEngine : IEngine
     {
-        public override double GetComsumptionInHalfASecondBasedOnSpeed(double speed)
+        public EngineState State { get; set; }
+
+        public double GetComsumptionInHalfASecondBasedOnSpeed(double speed)
         {
             if (State != EngineState.Stopped)
             {

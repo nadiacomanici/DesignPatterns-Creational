@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder_Pizza_End", "Builde
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder_Pizza_FluentInterface", "Builder_Pizza_FluentInterface\Builder_Pizza_FluentInterface.csproj", "{BF529637-6CAD-4162-BD75-9B2D40BC5116}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory_Cars_Demo", "AbstractFactory_Cars_Demo\AbstractFactory_Cars_Demo.csproj", "{6B34F698-0BF5-4AAD-BE3F-BC73DBCA5025}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -111,6 +113,10 @@ Global
 		{BF529637-6CAD-4162-BD75-9B2D40BC5116}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF529637-6CAD-4162-BD75-9B2D40BC5116}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF529637-6CAD-4162-BD75-9B2D40BC5116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B34F698-0BF5-4AAD-BE3F-BC73DBCA5025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B34F698-0BF5-4AAD-BE3F-BC73DBCA5025}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B34F698-0BF5-4AAD-BE3F-BC73DBCA5025}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B34F698-0BF5-4AAD-BE3F-BC73DBCA5025}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

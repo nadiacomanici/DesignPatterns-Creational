@@ -1,15 +1,13 @@
 ﻿using System.Threading;
-using AbstractFactory_Cars_End.Classes;
-using AbstractFactory_Cars_End.Classes.Combustion;
+using AbstractFactory_Cars_Demo.Classes;
 
-namespace AbstractFactory_Cars_End
+namespace AbstractFactory_Cars_Demo
 {
     class Program
     {
         static void Main(string[] args)
         {
-            //var car = new Car(new CombustionCarFactory(10, 8, "liters"));
-            var car = new Car(new ElectricCarFactory(30, 30));
+            var car = new Car(new Engine(), new FuelStorage(10, 8, "liters"));
 
             // Start the car and let it accelerate and move until it runs out of fuel
             car.TurnOn();

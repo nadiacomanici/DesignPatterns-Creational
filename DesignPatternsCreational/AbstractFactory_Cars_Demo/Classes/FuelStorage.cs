@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Timers;
 
-namespace AbstractFactory_Cars_End.Classes.Contracts
+namespace AbstractFactory_Cars_Demo.Classes
 {
-    public abstract class FuelStorage
+    public class FuelStorage
     {
         private Timer _fillStorageTimer;
 
@@ -53,6 +53,9 @@ namespace AbstractFactory_Cars_End.Classes.Contracts
             }
         }
 
-        protected abstract double GetUnitsToFillInHalfASecond();
+        private double GetUnitsToFillInHalfASecond()
+        {
+            return 1;
+        }
     }
 }

@@ -9,18 +9,18 @@ namespace AbstractFactory_Cars_Begin.Classes
 
         public double CapacityInUnits { get; protected set; }
         public double AvailableUnits { get; set; }
-        public string Unit { get; protected set; }
+        public string UnitName { get; protected set; }
 
         public bool IsFilling
         {
             get { return _fillStorageTimer.Enabled; }
         }
 
-        public FuelStorage(double capacityInUnits, double availableUnits, string unit)
+        public FuelStorage(double capacityInUnits, double availableUnits, string unitName)
         {
             CapacityInUnits = capacityInUnits;
             AvailableUnits = availableUnits;
-            Unit = unit;
+            UnitName = unitName;
 
             _fillStorageTimer = new Timer(500);
             _fillStorageTimer.Elapsed += FillStorageTimer_Elapsed;
@@ -28,13 +28,13 @@ namespace AbstractFactory_Cars_Begin.Classes
 
         public void StartFilling()
         {
-            Console.WriteLine($"Started filling storage from {AvailableUnits} {Unit} and capacity={CapacityInUnits} {Unit}");
+            Console.WriteLine($"Started filling storage from {AvailableUnits} {UnitName} and capacity={CapacityInUnits} {UnitName}");
             _fillStorageTimer.Start();
         }
 
         public void StopFilling()
         {
-            Console.WriteLine($"Stopped filling storage at {AvailableUnits} {Unit} and capacity={CapacityInUnits} {Unit}");
+            Console.WriteLine($"Stopped filling storage at {AvailableUnits} {UnitName} and capacity={CapacityInUnits} {UnitName}");
             _fillStorageTimer.Stop();
         }
 
@@ -49,7 +49,7 @@ namespace AbstractFactory_Cars_Begin.Classes
             {
                 var increment = GetUnitsToFillInHalfASecond();
                 AvailableUnits += increment;
-                Console.WriteLine($"Availability is being increased by={increment} {Unit} so, there are {AvailableUnits} {Unit} available and capacity={CapacityInUnits} {Unit}");
+                Console.WriteLine($"Availability is being increased by={increment} {UnitName} so, there are {AvailableUnits} {UnitName} available and capacity={CapacityInUnits} {UnitName}");
             }
         }
 

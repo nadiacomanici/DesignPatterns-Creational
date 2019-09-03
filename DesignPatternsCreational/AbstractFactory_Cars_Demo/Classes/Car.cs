@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Timers;
 
-namespace AbstractFactory_Cars_Begin.Classes
+namespace AbstractFactory_Cars_Demo.Classes
 {
     public class Car
     {

@@ -1,8 +1,13 @@
-﻿using AbstractFactory_Cars_End.Classes.Contracts;
-
-namespace AbstractFactory_Cars_End.Classes.Combustion
+﻿namespace AbstractFactory_Cars_Demo.Classes
 {
-    public class CombustionEngine : IEngine
+    public enum EngineState
+    {
+        Stopped,
+        Started,
+        Moving
+    }
+
+    public class Engine
     {
         public EngineState State { get; set; }
 

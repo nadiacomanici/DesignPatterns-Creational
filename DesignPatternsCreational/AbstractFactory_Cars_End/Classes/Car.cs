@@ -8,14 +8,25 @@ namespace AbstractFactory_Cars_End.Classes
     {
         private Timer _fuelComsumptionTimer;
 
-        public Engine Engine { get; private set; }
-        public FuelStorage FuelStorage { get; private set; }
+        private readonly IEngine _engine;
+        private readonly FuelStorage _fuelStorage;
+
         public int Speed { get; private set; }
+
+        public bool IsEngineRunning
+        {
+            get { return _engine.State != EngineState.Stopped; }
+        }
+
+        public bool IsFuelStorageFilling
+        {
+            get { return _fuelStorage.IsFilling; }
+        }
 
         public Car(ICarFactory carFactory)
         {
-            Engine = carFactory.CreateEngine();
-            FuelStorage = carFactory.CreateFuelStorage();
+            _engine = carFactory.CreateEngine();
+            _fuelStorage = carFactory.CreateFuelStorage();
 
             _fuelComsumptionTimer = new Timer(500);
             _fuelComsumptionTimer.Elapsed += FuelComsumptionTimer_Elapsed;
@@ -23,10 +34,10 @@ namespace AbstractFactory_Cars_End.Classes
 
         public void TurnOn()
         {
-            if (Engine.State == EngineState.Stopped)
+            if (_engine.State == EngineState.Stopped)
             {
-                Engine.State = EngineState.Started;
-                Console.WriteLine($"Car is turned on and has FuelStorage with {FuelStorage.AvailableUnits} {FuelStorage.Unit}");
+                _engine.State = EngineState.Started;
+                Console.WriteLine($"Car is turned on and has FuelStorage with {_fuelStorage.AvailableUnits} {_fuelStorage.UnitName}");
                 _fuelComsumptionTimer.Start();
             }
             else
@@ -37,12 +48,12 @@ namespace AbstractFactory_Cars_End.Classes
 
         public void AccelerateBy(int speedIncrement)
         {
-            if (Engine.State == EngineState.Started)
+            if (_engine.State == EngineState.Started)
             {
-                Engine.State = EngineState.Moving;
+                _engine.State = EngineState.Moving;
             }
 
-            if (Engine.State == EngineState.Moving)
+            if (_engine.State == EngineState.Moving)
             {
                 Speed += speedIncrement;
                 Console.WriteLine($"Car accelerated by {speedIncrement} km/h. Speed is now {Speed} km/h");
@@ -55,9 +66,9 @@ namespace AbstractFactory_Cars_End.Classes
 
         public void TurnOff()
         {
-            if (Engine.State != EngineState.Stopped)
+            if (_engine.State != EngineState.Stopped)
             {
-                Engine.State = EngineState.Stopped;
+                _engine.State = EngineState.Stopped;
                 Console.WriteLine("Car is turned off");
                 _fuelComsumptionTimer.Stop();
             }
@@ -69,18 +80,28 @@ namespace AbstractFactory_Cars_End.Classes
 
         private void FuelComsumptionTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            var consumption = Engine.GetComsumptionInHalfASecondBasedOnSpeed(Speed);
-            FuelStorage.AvailableUnits -= consumption;
-            if (FuelStorage.AvailableUnits > 0)
+            var consumption = _engine.GetComsumptionInHalfASecondBasedOnSpeed(Speed);
+            _fuelStorage.AvailableUnits -= consumption;
+            if (_fuelStorage.AvailableUnits > 0)
             {
-                Console.WriteLine($"Consumption={consumption} {FuelStorage.Unit} for speed={Speed} km/h so, FuelStorage has {FuelStorage.AvailableUnits} {FuelStorage.Unit}");
+                Console.WriteLine($"Consumption={consumption} {_fuelStorage.UnitName} for speed={Speed} km/h so, FuelStorage has {_fuelStorage.AvailableUnits} {_fuelStorage.UnitName}");
             }
             else
             {
-                FuelStorage.AvailableUnits = 0;
+                _fuelStorage.AvailableUnits = 0;
                 Console.WriteLine("Fuel storage is empty, so the car is being stopped");
                 TurnOff();
             }
+        }
+
+        internal void StartFillingFuelStorage()
+        {
+            _fuelStorage.StartFilling();
+        }
+
+        internal void StopFillingFuelStorage()
+        {
+            _fuelStorage.StopFilling();
         }
     }
 }
