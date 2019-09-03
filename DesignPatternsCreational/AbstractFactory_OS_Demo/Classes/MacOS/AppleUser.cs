@@ -1,9 +1,9 @@
 ﻿using System;
-using AbstractFactory_OS_Begin.Classes.Contracts;
+using AbstractFactory_OS_Demo.Classes.Contracts;
 
-namespace AbstractFactory_OS_Begin.Classes.Windows
+namespace AbstractFactory_OS_Demo.Classes.MacOS
 {
-    public class MicrosoftAccount : IUserAccount
+    public class AppleUser : IUserAccount
     {
         public string ID { get; private set; }
 
@@ -13,11 +13,10 @@ namespace AbstractFactory_OS_Begin.Classes.Windows
         {
             get
             {
-                return $"{Username}@microsoft.com";
+                return $"{Username}@apple.com";
             }
         }
-
-        public MicrosoftAccount(string id, string username)
+        public AppleUser(string id, string username)
         {
             ID = id;
             Username = username;

@@ -1,8 +1,9 @@
-﻿using AbstractFactory_OS_End.Classes.Contracts;
+﻿using System;
+using AbstractFactory_OS_End.Classes.Contracts;
 
 namespace AbstractFactory_OS_End.Classes.Windows
 {
-    public class MicrosoftAccount : IUser
+    public class MicrosoftAccount : IUserAccount
     {
         public string ID { get; private set; }
 
@@ -24,7 +25,7 @@ namespace AbstractFactory_OS_End.Classes.Windows
 
         public void ResetPassword()
         {
-            // TODO: send email with reset password link to microsoft website
+            Console.WriteLine($"Reset password email was sent to: {Email}");
         }
     }
 }

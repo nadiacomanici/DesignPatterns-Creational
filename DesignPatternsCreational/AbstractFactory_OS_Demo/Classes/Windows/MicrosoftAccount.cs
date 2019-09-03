@@ -1,7 +1,7 @@
 ﻿using System;
-using AbstractFactory_OS_Begin.Classes.Contracts;
+using AbstractFactory_OS_Demo.Classes.Contracts;
 
-namespace AbstractFactory_OS_Begin.Classes.Windows
+namespace AbstractFactory_OS_Demo.Classes.Windows
 {
     public class MicrosoftAccount : IUserAccount
     {

@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using AbstractFactory_OS_End.Classes.Contracts;
+using AbstractFactory_OS_Demo.Classes.Contracts;
 
-namespace AbstractFactory_OS_End.Classes.Windows
+namespace AbstractFactory_OS_Demo.Classes.Windows
 {
     public class WindowsStore : IAppStore
     {

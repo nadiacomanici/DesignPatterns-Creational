@@ -1,8 +1,8 @@
 ﻿using System;
-using AbstractFactory_OS_Begin.Classes.MacOS;
-using AbstractFactory_OS_Begin.Classes.Windows;
+using AbstractFactory_OS_Demo.Classes.MacOS;
+using AbstractFactory_OS_Demo.Classes.Windows;
 
-namespace AbstractFactory_OS_Begin
+namespace AbstractFactory_OS_Demo
 {
     class Program
     {

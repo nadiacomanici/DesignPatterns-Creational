@@ -44,11 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Contracts\IAppStore.cs" />
-    <Compile Include="Classes\Contracts\IUser.cs" />
+    <Compile Include="Classes\Contracts\IUserAccount.cs" />
     <Compile Include="Classes\MacOS\AppleStore.cs" />
     <Compile Include="Classes\MacOS\AppleUser.cs" />
-    <Compile Include="Classes\MacOS\WindowsDevice.cs" />
-    <Compile Include="Classes\Windows\AppleDevice.cs" />
+    <Compile Include="Classes\Windows\WindowsDevice.cs" />
+    <Compile Include="Classes\MacOS\AppleDevice.cs" />
     <Compile Include="Classes\Windows\MicrosoftAccount.cs" />
     <Compile Include="Classes\Windows\WindowsStore.cs" />
     <Compile Include="Program.cs" />

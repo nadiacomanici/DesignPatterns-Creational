@@ -2,7 +2,7 @@
 {
     public interface IManufacturerFactory
     {
-        IUser CreateUser(string userId, string username);
+        IUserAccount CreateUser();
 
         IAppStore CreateAppStore();
     }

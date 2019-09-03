@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Builder_Pizza_FluentInterfa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory_Cars_Demo", "AbstractFactory_Cars_Demo\AbstractFactory_Cars_Demo.csproj", "{6B34F698-0BF5-4AAD-BE3F-BC73DBCA5025}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractFactory_OS_Demo", "AbstractFactory_OS_Demo\AbstractFactory_OS_Demo.csproj", "{51BD397F-CFA0-4046-BC54-98DDD7637898}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{6B34F698-0BF5-4AAD-BE3F-BC73DBCA5025}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6B34F698-0BF5-4AAD-BE3F-BC73DBCA5025}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6B34F698-0BF5-4AAD-BE3F-BC73DBCA5025}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51BD397F-CFA0-4046-BC54-98DDD7637898}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51BD397F-CFA0-4046-BC54-98DDD7637898}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51BD397F-CFA0-4046-BC54-98DDD7637898}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51BD397F-CFA0-4046-BC54-98DDD7637898}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

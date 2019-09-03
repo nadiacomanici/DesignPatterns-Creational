@@ -1,6 +1,6 @@
 ﻿namespace AbstractFactory_OS_End.Classes.Contracts
 {
-    public interface IUser
+    public interface IUserAccount
     {
         string ID { get; }
         string Username { get; }

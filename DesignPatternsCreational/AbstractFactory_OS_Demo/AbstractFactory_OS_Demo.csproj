@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B33D71DF-CA69-4D88-B0D3-070DE618B9A7}</ProjectGuid>
+    <ProjectGuid>{51BD397F-CFA0-4046-BC54-98DDD7637898}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AbstractFactory_OS_End</RootNamespace>
-    <AssemblyName>AbstractFactory_OS_End</AssemblyName>
+    <RootNamespace>AbstractFactory_OS_Demo</RootNamespace>
+    <AssemblyName>AbstractFactory_OS_Demo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,14 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Contracts\IAppStore.cs" />
-    <Compile Include="Classes\Contracts\IManufacturerFactory.cs" />
     <Compile Include="Classes\Contracts\IUserAccount.cs" />
-    <Compile Include="Classes\MacOS\AppleFactory.cs" />
     <Compile Include="Classes\MacOS\AppleStore.cs" />
     <Compile Include="Classes\MacOS\AppleUser.cs" />
-    <Compile Include="Classes\Device.cs" />
+    <Compile Include="Classes\Windows\WindowsDevice.cs" />
+    <Compile Include="Classes\MacOS\AppleDevice.cs" />
     <Compile Include="Classes\Windows\MicrosoftAccount.cs" />
-    <Compile Include="Classes\Windows\MicrosoftFactory.cs" />
     <Compile Include="Classes\Windows\WindowsStore.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -6,19 +6,19 @@ namespace AbstractFactory_OS_Begin.Classes.MacOS
 {
     public class AppleStore : IAppStore
     {
-        public bool Login(IUser user)
+        public bool Login(IUserAccount userAccount)
         {
-            Console.WriteLine($"Login for user with email {user.Email}");
+            Console.WriteLine($"Login for user with email {userAccount.Email}");
             return true;
         }
 
-        public List<string> SearchApp(IUser user, string searchKeyword)
+        public List<string> SearchApp(IUserAccount userAccount, string searchKeyword)
         {
             return new List<string>()
             {
-                $"App {searchKeyword}1 found on apple store for user with appleId={user.Username}",
-                $"App {searchKeyword}2 found on apple store for user with appleId={user.Username}",
-                $"App {searchKeyword}3 found on apple store for user with appleId={user.Username}"
+                $"App {searchKeyword}1 found on apple store for user with appleId={userAccount.Username}",
+                $"App {searchKeyword}2 found on apple store for user with appleId={userAccount.Username}",
+                $"App {searchKeyword}3 found on apple store for user with appleId={userAccount.Username}"
             };
         }
     }

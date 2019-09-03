@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AbstractFactory_OS_End.Classes.Contracts
+namespace AbstractFactory_OS_Demo.Classes.Contracts
 {
     public interface IAppStore
     {

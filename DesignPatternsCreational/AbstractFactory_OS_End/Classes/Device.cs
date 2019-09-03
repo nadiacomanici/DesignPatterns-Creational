@@ -5,12 +5,12 @@ namespace AbstractFactory_OS_End.Classes.Windows
 {
     public class Device
     {
-        private readonly IUser _user;
+        private readonly IUserAccount _user;
         private readonly IAppStore _appStore;
 
-        public Device(IManufacturerFactory factory, string userId, string username)
+        public Device(IManufacturerFactory factory)
         {
-            _user = factory.CreateUser(userId, username);
+            _user = factory.CreateUser();
             _appStore = factory.CreateAppStore();
         }
 
@@ -22,6 +22,10 @@ namespace AbstractFactory_OS_End.Classes.Windows
         public List<string> SearchForApp(string searchKeyword)
         {
             return _appStore.SearchApp(_user, searchKeyword);
+        }
+        internal void ResetUserPassword()
+        {
+            _user.ResetPassword();
         }
     }
 }

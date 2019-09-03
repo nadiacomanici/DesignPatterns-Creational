@@ -1,8 +1,9 @@
-﻿using AbstractFactory_OS_Begin.Classes.Contracts;
+﻿using System;
+using AbstractFactory_OS_Begin.Classes.Contracts;
 
 namespace AbstractFactory_OS_Begin.Classes.MacOS
 {
-    public class AppleUser : IUser
+    public class AppleUser : IUserAccount
     {
         public string ID { get; private set; }
 
@@ -23,7 +24,7 @@ namespace AbstractFactory_OS_Begin.Classes.MacOS
 
         public void ResetPassword()
         {
-            // TODO: send email with reset password link to apple website
+            Console.WriteLine($"Reset password email was sent to: {Email}");
         }
     }
 }
