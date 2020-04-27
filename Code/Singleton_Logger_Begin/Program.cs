@@ -1,7 +1,7 @@
 ﻿using System;
-using Singleton_Logger_End.Classes;
+using Singleton_Logger_Begin.Classes;
 
-namespace Singleton_Logger_End
+namespace Singleton_Logger_Begin
 {
     class Program
     {

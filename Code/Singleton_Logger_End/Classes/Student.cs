@@ -1,4 +1,4 @@
-﻿namespace Singleton_Logger_End.Classes
+﻿namespace Singleton_Logger_Begin.Classes
 {
     public class Student
     {

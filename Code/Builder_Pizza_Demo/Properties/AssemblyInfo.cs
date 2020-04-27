@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Singleton_Logger_End")]
+[assembly: AssemblyTitle("Builder_Pizza_Demo")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Singleton_Logger_End")]
+[assembly: AssemblyProduct("Builder_Pizza_Demo")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4b2da6df-7c89-48cb-9bb0-56167ec9dc44")]
+[assembly: Guid("03bc7fd7-bdf4-4a22-abf5-e91f758384e6")]
 
 // Version information for an assembly consists of the following four values:
 //

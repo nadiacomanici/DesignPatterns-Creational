@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Singleton_Logger_End.Classes
+namespace Singleton_Logger_Begin.Classes
 {
     public class University
     {

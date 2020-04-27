@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{51BD397F-CFA0-4046-BC54-98DDD7637898}</ProjectGuid>
+    <ProjectGuid>{B0B7B8D6-4DC5-4EB0-A2B3-F2A3042082D7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>AbstractFactory_OS_Demo</RootNamespace>
-    <AssemblyName>AbstractFactory_OS_Demo</AssemblyName>
+    <RootNamespace>Singleton_Logger_Demo</RootNamespace>
+    <AssemblyName>Singleton_Logger_Demo</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,14 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Contracts\IAppStore.cs" />
-    <Compile Include="Classes\Contracts\IUserAccount.cs" />
-    <Compile Include="Classes\MacOS\AppleStore.cs" />
-    <Compile Include="Classes\MacOS\AppleUser.cs" />
-    <Compile Include="Classes\Windows\WindowsDevice.cs" />
-    <Compile Include="Classes\MacOS\AppleDevice.cs" />
-    <Compile Include="Classes\Windows\MicrosoftAccount.cs" />
-    <Compile Include="Classes\Windows\WindowsStore.cs" />
+    <Compile Include="Classes\Logger.cs" />
+    <Compile Include="Classes\Student.cs" />
+    <Compile Include="Classes\University.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
